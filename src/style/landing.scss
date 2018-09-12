@@ -1,0 +1,22 @@
+.landing {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/pokemon_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .intro {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

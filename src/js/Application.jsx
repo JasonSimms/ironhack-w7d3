@@ -1,6 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
+import NotFound from './NotFound'
 import Landing from './Landing'
 import Pokemon from './Pokemon'
 
@@ -9,8 +10,11 @@ class Application extends React.Component {
         return (
             <BrowserRouter>
                 <div>
-                    <Route exact path="/" component={Landing} />
-                    <Route exact path="/pokemon" component={Pokemon} />
+                    <Switch>
+                        <Route exact path="/" component={Landing} />
+                        <Route exact path="/pokemon" component={Pokemon} />
+                        <Route component={NotFound} />
+                    </Switch>
                 </div>
             </BrowserRouter>
         )

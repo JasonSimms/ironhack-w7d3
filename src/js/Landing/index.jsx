@@ -2,8 +2,11 @@ import React from 'react'
 
 const index = () => {
     return (
-        <div>
-            <h1>Welcome!</h1>
+        <div className="container landing">
+            <div className="intro">
+                <h1>Welcome to our Pokemon page!</h1>
+                <h3>Try to catch them all.</h3>
+            </div>
         </div>
     )
 }
