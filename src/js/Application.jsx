@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import NotFound from './NotFound'
+import Navigation from './Navigation'
 import Landing from './Landing'
 import Pokemon from './Pokemon'
 
@@ -10,6 +11,7 @@ class Application extends React.Component {
         return (
             <BrowserRouter>
                 <div>
+                    <Navigation />
                     <Switch>
                         <Route exact path="/" component={Landing} />
                         <Route exact path="/pokemon" component={Pokemon} />

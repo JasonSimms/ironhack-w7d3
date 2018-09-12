@@ -2,6 +2,11 @@
 @import './card.scss';
 @import './landing.scss';
 
+.navigation {
+    padding: 25px;
+    border-bottom: 2px solid RGB(255, 41, 43);
+}
+
 .poke-flex {
     display: flex;
     justify-content: space-between;
