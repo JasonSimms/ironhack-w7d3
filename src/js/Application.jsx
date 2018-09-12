@@ -14,7 +14,7 @@ class Application extends React.Component {
                     <Navigation />
                     <Switch>
                         <Route exact path="/" component={Landing} />
-                        <Route exact path="/pokemon" component={Pokemon} />
+                        <Route path="/pokemon" component={Pokemon} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>

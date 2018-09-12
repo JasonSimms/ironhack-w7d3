@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Switch, Route } from 'react-router-dom'
 
 import List from './List'
+import Details from './Details'
 
 class Pokemon extends Component {
     constructor(props) {
@@ -40,13 +42,30 @@ class Pokemon extends Component {
         }
 
         return (
-            <List
-                pokemon={this.state.pokemon}
-                search={this.state.search}
-                catchPokemon={this._catchPokemon}
-                handleSearchChange={this._handleSearchChange}
-                searchPokemon={this._searchPokemon}
-            />
+            <Switch>
+                <Route
+                    exact
+                    path="/pokemon"
+                    render={() => {
+                        return (
+                            <List
+                                pokemon={this.state.pokemon}
+                                search={this.state.search}
+                                catchPokemon={this._catchPokemon}
+                                handleSearchChange={this._handleSearchChange}
+                                searchPokemon={this._searchPokemon}
+                            />
+                        )
+                    }}
+                />
+                <Route
+                    exact
+                    path="/pokemon/:id"
+                    render={() => {
+                        return <Details pokemon={this.state.pokemon} />
+                    }}
+                />
+            </Switch>
         )
     }
 
