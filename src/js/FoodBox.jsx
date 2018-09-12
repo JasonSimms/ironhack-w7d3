@@ -1,8 +1,13 @@
 import React from 'react'
 
 const FoodBox = ({ food, handleQtyChange }) => {
+    const ratio = food.calories / 750
+
+    const red = parseInt(ratio * 255)
+    const green = 255 - parseInt(ratio * 255)
+
     return (
-        <div className="box">
+        <div className="box" style={{ backgroundColor: `rgba(${red}, ${green}, 25, 0.5)` }}>
             <article className="media">
                 <div className="media-left">
                     <figure className="image is-64x64">
