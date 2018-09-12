@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
 const Navigation = props => {
-    console.log(props)
-
     if (props.location.pathname === '/') return null
 
     return (
